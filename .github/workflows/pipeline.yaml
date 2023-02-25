@@ -45,7 +45,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: cd .. | mvn --batch-mode --update-snapshots verify
+        run: pwd | cd .. | mvn --batch-mode --update-snapshots verify
 
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'

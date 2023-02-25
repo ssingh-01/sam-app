@@ -47,7 +47,7 @@ jobs:
         - name: Packaging Jar
           id: packaging-jar
           shell: bash
-          run: mvn clean install
+          run: cd HelloWorldFunction ; mvn clean install
 
   delete-feature:
     if: startsWith(github.event.ref, 'feature') && github.event_name == 'delete'
